@@ -20,7 +20,13 @@ build: run_qmake FORCE
 	@(cd $(BUILD_FOLDER) && make)
 
 run: build
-	@$(BUILD_FOLDER)/$(BINARY_NAME)
+	@QT_QPA_PLATFORM=xcb QT_MEDIA_BACKEND=gstreamer bash -c '$(BUILD_FOLDER)/$(BINARY_NAME)'
+
+package:
+	@cp $(BUILD_FOLDER)/$(BINARY_NAME) /mnt/c/shared/qt-test/
+	@cp -r $(ROOT_FOLDER)/qml          /mnt/c/shared/qt-test/
+	@cp -r $(ROOT_FOLDER)/extras/*     /mnt/c/shared/qt-test/
+	@echo "Data copied to C:\shared\qt-test"
 
 clean:
 	rm -rf build

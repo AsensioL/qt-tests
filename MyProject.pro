@@ -1,6 +1,6 @@
 # MyProject.pro
 
-QT       += core gui widgets quick
+QT       += core gui widgets quick multimedia
 
 TEMPLATE = app
 TARGET = MyProject
@@ -8,4 +8,4 @@ INCLUDEPATH += .
 
 # Input
 SOURCES += src/main.cpp
-HEADERS +=
+HEADERS += src/GraphicsInfo.hpp
