@@ -46,8 +46,9 @@ int main(int argc, char *argv[])
     //const QUrl url(QStringLiteral("qml/locate_object.qml"));
     //const QUrl url(QStringLiteral("qml/media_player_transforms.qml"));
     //const QUrl url(QStringLiteral("qml/clipping_and_zoom_demo.qml"));
-    const QUrl url(QStringLiteral("qml/clipping_and_zoom_improved.qml"));
+    //const QUrl url(QStringLiteral("qml/clipping_and_zoom_improved.qml"));
     //const QUrl url(QStringLiteral("qml/pinch_area_demo.qml"));
+    const QUrl url(QStringLiteral("qml/ui_inputs.qml"));
 
 
     engine.load(url);
